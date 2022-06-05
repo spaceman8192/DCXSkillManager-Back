@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const mysql = require("mysql");
+require("dotenv").config();
+const DB_PW = process.env.DB_PW;
 
 const conn = mysql.createConnection({
   host: "localhost",
   user: "by524",
-  password: "1234",
+  password: DB_PW,
   database: "skilldb",
 });
 
